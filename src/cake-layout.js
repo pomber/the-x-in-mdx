@@ -3,7 +3,7 @@ import s from "./cake.module.css"
 import { MiniEditor } from "@code-hike/mini-editor"
 import { MiniBrowser } from "@code-hike/mini-browser"
 import { Range, getTrackBackground } from "react-range"
-import { Video, useTimeData } from "@code-hike/player"
+import { useTimeData } from "@code-hike/player"
 import { useSpring } from "use-spring"
 import { sim } from "@code-hike/sim-user"
 import { SpeakerPanel } from "./speaker"
@@ -99,6 +99,7 @@ export function CakeLayout({
               steps={browserSteps}
               progress={progress}
               backward={backward}
+              prependOrigin={true}
               ref={browserRef}
             />
           </div>
@@ -158,7 +159,7 @@ function VideoControls({
 
   return (
     <>
-      <Range
+      {/* <Range
         step={0.1}
         min={0}
         max={totalSeconds}
@@ -194,7 +195,7 @@ function VideoControls({
             }}
           />
         )}
-      />
+      /> */}
       <button
         onClick={() =>
           onChange({
