@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Children } from "react"
 import { MDXProvider } from "@mdx-js/react"
 import Content from "../demo/cake.mdx"
 import { CakeLayout } from "../src/cake-layout"
@@ -13,6 +13,10 @@ export default function Page() {
       <Content />
     </MDXProvider>
   )
+}
+
+const components = {
+  wrapper: Wrapper,
 }
 
 function Wrapper({ children }) {
@@ -31,13 +35,11 @@ function Wrapper({ children }) {
     />
   )
 }
-const components = {
-  wrapper: Wrapper,
-}
 
 function getStepsFromMDX(children) {
   const splits = [[]]
-  React.Children.forEach(children, child => {
+
+  Children.forEach(children, child => {
     if (child.props.mdxType === "hr") {
       splits.push([])
     } else {
@@ -45,12 +47,12 @@ function getStepsFromMDX(children) {
       lastSplit.push(child)
     }
   })
+
   const videoSteps = splits.map(split => {
     const videoElement = split.find(
       child => child.props.mdxType === "Video"
     )
-    const props = videoElement.props
-    return props
+    return videoElement.props
   })
 
   const browserSteps = splits.map(split => {
@@ -58,7 +60,7 @@ function getStepsFromMDX(children) {
       child => child.props.mdxType === "Browser"
     )
     const { children, ...rest } = browserElement.props
-    const actions = React.Children.map(
+    const actions = Children.map(
       children,
       child => child.props
     )
