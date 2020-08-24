@@ -2,11 +2,11 @@ import React from "react"
 import s from "./cake.module.css"
 import { MiniEditor } from "@code-hike/mini-editor"
 import { MiniBrowser } from "@code-hike/mini-browser"
-import { Range, getTrackBackground } from "react-range"
 import { useTimeData } from "@code-hike/player"
 import { useSpring } from "use-spring"
 import { sim } from "@code-hike/sim-user"
 import { SpeakerPanel } from "./speaker"
+import { Details } from "./details"
 
 export function CakeLayout({
   videoSteps,
@@ -41,9 +41,6 @@ export function CakeLayout({
     videoTime
   )
 
-  const seek = ({ stepIndex, videoTime }) => {
-    playerRef.current.seek(stepIndex, videoTime)
-  }
   const play = () => {
     playerRef.current.play()
     setIsPlaying(true)
@@ -116,113 +113,15 @@ export function CakeLayout({
             />
           </div>
         </div>
-        <VideoControls
-          steps={videoSteps}
+        <Details
           videoTime={videoTime}
-          stepIndex={stepIndex}
-          onChange={seek}
+          totalSeconds={totalSeconds}
+          isPlaying={isPlaying}
           play={play}
           pause={pause}
-          isPlaying={isPlaying}
         />
       </main>
     </div>
-  )
-}
-
-function VideoControls({
-  steps,
-  stepIndex,
-  videoTime,
-  onChange,
-  isPlaying,
-  play,
-  pause,
-}) {
-  const {
-    currentSeconds,
-    getStepAndTime,
-    totalSeconds,
-  } = useTimeData({
-    steps,
-    stepIndex,
-    videoTime,
-  })
-
-  const value = currentSeconds
-
-  const handleChange = values => {
-    const value = values[0]
-    const { stepIndex, videoTime } = getStepAndTime(value)
-    onChange({ stepIndex, videoTime })
-  }
-
-  return (
-    <>
-      {/* <Range
-        step={0.1}
-        min={0}
-        max={totalSeconds}
-        values={[value]}
-        onChange={handleChange}
-        renderTrack={({ props, children }) => (
-          <div
-            {...props}
-            style={{
-              ...props.style,
-              height: "5px",
-              width: "100%",
-              background: getTrackBackground({
-                values: [value],
-                colors: ["red", "#ccc"],
-                min: 0,
-                max: totalSeconds,
-              }),
-            }}
-          >
-            {children}
-          </div>
-        )}
-        renderThumb={({ props }) => (
-          <div
-            {...props}
-            style={{
-              ...props.style,
-              height: "12px",
-              width: "12px",
-              borderRadius: "50%",
-              backgroundColor: "red",
-            }}
-          />
-        )}
-      /> */}
-      <button
-        onClick={() =>
-          onChange({
-            stepIndex: stepIndex - 1,
-            videoTime: 0,
-          })
-        }
-      >
-        Prev
-      </button>
-      {isPlaying ? (
-        <button onClick={pause}>Pause</button>
-      ) : (
-        <button onClick={play}>Play</button>
-      )}
-      <button
-        onClick={() =>
-          onChange({
-            stepIndex: stepIndex + 1,
-            videoTime: 0,
-          })
-        }
-      >
-        Next
-      </button>
-      <div style={{ color: "white" }}>{videoTime}</div>
-    </>
   )
 }
 
@@ -235,8 +134,6 @@ function useCaption(captionSteps, stepIndex, videoTime) {
     ({ start, end }) =>
       start <= videoTime && videoTime < end
   )
-
-  console.log({ stepCaptions, caption, videoTime })
 
   return caption ? caption.text : null
 }
