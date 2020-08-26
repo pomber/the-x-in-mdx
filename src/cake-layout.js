@@ -79,8 +79,21 @@ export function CakeLayout({
         .ch-frame .ch-editor-body {
           padding: 0;
         }
+
+        @media screen and (max-width: 767px) and (orientation: portrait) {
+          html {
+            transform: rotate(-90deg);
+            transform-origin: left top;
+            width: 100vh;
+            height: 100vw;
+            overflow-x: hidden;
+            position: absolute;
+            top: 100%;
+            left: 0;
+          }
+        }
       `}</style>
-      <main className={s.main}>
+      <Fit className={s.main}>
         <div className={s.grid}>
           <div className={s.div1}>
             <MiniEditor
@@ -120,7 +133,7 @@ export function CakeLayout({
           play={play}
           pause={pause}
         />
-      </main>
+      </Fit>
     </div>
   )
 }
@@ -136,4 +149,76 @@ function useCaption(captionSteps, stepIndex, videoTime) {
   )
 
   return caption ? caption.text : null
+}
+
+//
+
+function Fit({
+  children,
+  width = 1024,
+  height = 576,
+  ...props
+}) {
+  return (
+    <main
+      {...props}
+      style={{
+        width,
+        height,
+        minWidth: width,
+        minHeight: height,
+        transform: "scale(var(--scale))",
+      }}
+    >
+      <GenerateScaleVar width={width} height={height} />
+      {children}
+    </main>
+  )
+}
+
+function GenerateScaleVar({
+  width,
+  height,
+  minZoom = 0,
+  maxZoom = 1,
+}) {
+  const js = `
+(function() {
+  console.log('script')
+  window.rsrtvScale = function resetScale() {
+    const root = document.documentElement;
+    const scale = Math.max(
+      ${minZoom},
+      Math.min(${maxZoom}, root.clientWidth / ${width}, root.clientHeight / ${height})
+      );
+    console.log("reset", scale)
+    root.style.setProperty('--scale', scale.toString());
+  }
+  window.rsrtvScale()
+  window.addEventListener('resize', window.rsrtvScale)
+})()`
+  React.useLayoutEffect(() => {
+    window.rsrtvScale = function resetScale() {
+      const root = document.documentElement
+
+      let vWidth = root.clientWidth
+      let vHeight = root.clientHeight
+      if (
+        vWidth < 768 &&
+        window.matchMedia("(orientation: portrait)").matches
+      ) {
+        vWidth = root.clientHeight
+        vHeight = root.clientWidth
+      }
+      const scale = Math.max(
+        minZoom,
+        Math.min(maxZoom, vWidth / width, vHeight / height)
+      )
+      root.style.setProperty("--scale", scale.toString())
+    }
+    window.rsrtvScale()
+
+    window.addEventListener("resize", window.rsrtvScale)
+  }, [])
+  return <script dangerouslySetInnerHTML={{ __html: js }} />
 }
