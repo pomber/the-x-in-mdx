@@ -7,6 +7,7 @@ import { useSpring } from "use-spring"
 import { sim } from "@code-hike/sim-user"
 import { SpeakerPanel } from "./speaker"
 import { Details } from "./details"
+import { FitToViewport } from "react-fit-to-viewport"
 
 export function CakeLayout({
   videoSteps,
@@ -80,7 +81,13 @@ export function CakeLayout({
           padding: 0;
         }
       `}</style>
-      <main className={s.main}>
+      <FitToViewport
+        as="main"
+        className={s.main}
+        autoRotateAt={767}
+        width={1024}
+        height={576}
+      >
         <div className={s.grid}>
           <div className={s.div1}>
             <MiniEditor
@@ -120,7 +127,7 @@ export function CakeLayout({
           play={play}
           pause={pause}
         />
-      </main>
+      </FitToViewport>
     </div>
   )
 }

@@ -8,6 +8,10 @@ export default function Page() {
   return (
     <MDXProvider components={components}>
       <Head>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1"
+        />
         <title>The X in MDX</title>
       </Head>
       <Content />
