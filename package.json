@@ -20,7 +20,7 @@
     "raw-loader": "^4.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-fit-to-viewport": "^0.1.0",
+    "react-fit-to-viewport": "^0.1.1",
     "react-range": "^1.6.7",
     "theme-ui": "0.3.1",
     "use-spring": "^0.2.3"
