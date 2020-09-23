@@ -8,7 +8,13 @@ export function Details({
   pause,
 }) {
   return (
-    <div style={{ display: "flex", padding: "8px 16px" }}>
+    <div
+      style={{
+        display: "flex",
+        padding: "8px 16px",
+        color: "white",
+      }}
+    >
       <button
         style={{
           borderRadius: "50%",
@@ -19,18 +25,15 @@ export function Details({
           justifyContent: "center",
           alignItems: "center",
           background: "none",
-          color: "#222",
+          color: "white",
         }}
         onClick={isPlaying ? pause : play}
       >
         {isPlaying ? (
-          <PauseIcon
-            style={{ color: "#222", display: "block" }}
-          />
+          <PauseIcon style={{ display: "block" }} />
         ) : (
           <PlayIcon
             style={{
-              color: "#222",
               display: "block",
               marginLeft: "7px",
             }}
@@ -42,7 +45,7 @@ export function Details({
           The X in MDX
         </h1>
         <div>
-          MDXConf • <date>August 24th, 2020</date>
+          React Summit • <date>October 15-16, 2020</date>
         </div>
       </div>
       <div style={{ flex: 1 }} />

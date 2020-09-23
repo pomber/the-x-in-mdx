@@ -22,65 +22,35 @@ function SpeakerPanelWithRef(
         <div
           style={{
             height: "100%",
-            float: "right",
           }}
         >
           <Video
             steps={videoSteps}
             containerStyle={{
-              height: "100%",
+              top: -44,
             }}
             style={{
               height: "100%",
+              width: 362,
             }}
             onStepChange={changeStep}
             onTimeChange={onTimeChange}
             ref={playerRef}
           />
         </div>
-        <div
-          className={s.details}
-          style={{
-            top: 0,
-            bottom: 0,
-            left: 0,
-            right: 0,
-          }}
-        >
+        <div className={s.details}>
           <div>
-            <a
+            <span
               style={{
                 fontSize: "1.2em",
-                color: "#F19A38",
+                background: "#222",
+                display: "inline-block",
+                borderLeft: "2px solid #40eb22",
+                padding: "0 4px",
               }}
-              href="https://twitter.com/pomber"
             >
-              @pomber
-            </a>
-            <div style={{ height: 5 }} />
-            <span style={{ fontSize: "1.8em" }}>
-              Rodrigo
+              Rodrigo Pombo
             </span>
-            <br />
-            <span style={{ fontSize: "2em" }}>Pombo</span>
-            <div style={{ height: 10 }} />
-            <a
-              style={{ fontSize: "1.3em", margin: 0 }}
-              href="https://mdxjs.com/conf/"
-            >
-              <span
-                children="<"
-                style={{
-                  color: "#F19A38",
-                  fontSize: "1.2em",
-                }}
-              />
-              MDXConf
-              <span
-                children=" />"
-                style={{ color: "#F19A38" }}
-              />
-            </a>
           </div>
         </div>
       </div>
@@ -90,7 +60,13 @@ function SpeakerPanelWithRef(
           style={{ width: progressPercentage + "%" }}
         />
       </div>
-      <div className={s.captions}>{caption}</div>
+      <div className={s.captions}>
+        <span
+          style={{ background: "#111c", padding: "0 4px" }}
+        >
+          {caption}
+        </span>
+      </div>
     </div>
   )
 }
