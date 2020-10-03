@@ -7,25 +7,35 @@ export function Details({
   play,
   pause,
 }) {
+  if (isPlaying) return null
   return (
     <div
       style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
         display: "flex",
-        padding: "8px 16px",
+        justifyContent: "center",
+        alignItems: "center",
         color: "white",
+        height: "100%",
+        width: "100%",
+        background: "#0004",
+        zIndex: 10,
       }}
     >
       <button
         style={{
           borderRadius: "50%",
           overflow: "hidden",
-          height: 80,
-          width: 80,
+          height: 120,
+          width: 120,
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           background: "none",
           color: "white",
+          border: "2px solid",
         }}
         onClick={isPlaying ? pause : play}
       >
@@ -37,22 +47,18 @@ export function Details({
               display: "block",
               marginLeft: "7px",
             }}
+            size="4em"
           />
         )}
       </button>
-      <div style={{ marginLeft: "16px" }}>
+      {/* <div style={{ marginLeft: "16px" }}>
         <h1 style={{ margin: "8px 0 4px" }}>
           The X in MDX
         </h1>
         <div>
           React Summit • <date>October 15-16, 2020</date>
         </div>
-      </div>
-      <div style={{ flex: 1 }} />
-      <div>
-        {toTimeString(videoTime)} /{" "}
-        {toTimeString(totalSeconds)}
-      </div>
+      </div> */}
     </div>
   )
 }
