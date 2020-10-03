@@ -80,6 +80,10 @@ export function CakeLayout({
         .ch-frame .ch-editor-body {
           padding: 0;
         }
+
+        .ch-frame-content {
+          background: black;
+        }
       `}</style>
       <FitToViewport
         as="main"
@@ -119,13 +123,6 @@ export function CakeLayout({
               }
             />
           </div>
-          <div className={s.div4}>
-            <img
-              src="rs-logo.svg"
-              style={{ height: "100%", width: "100%" }}
-            />
-          </div>
-          <div className={s.div5}>Sponsors Placeholder</div>
         </div>
         <Details
           videoTime={videoTime}

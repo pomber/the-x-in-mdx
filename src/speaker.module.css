@@ -1,7 +1,10 @@
 .captions {
   color: #ddd;
-  /* background-color: #222; */
-  height: 100%;
+  height: 82px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,31 +13,10 @@
     BlinkMacSystemFont, Segoe WPC, Segoe UI, sans-serif;
   padding: 0 16px;
   margin: 0;
-  margin-top: -50px;
   z-index: 1;
   flex: 1;
   white-space: pre;
-}
-
-.progressContainer {
-  background: linear-gradient(90deg, #666d 1%, #999d 99%);
-}
-
-.progress {
-  height: 4px;
-  background: linear-gradient(
-    90deg,
-    #f19a38 1%,
-    #f79e06 99%
-  );
-}
-
-.author {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 1.24em;
 }
 
 .video {
@@ -45,21 +27,24 @@
   position: relative;
   display: flex;
   flex-flow: column;
+  border: 0.7px solid rgb(56, 56, 56);
 }
 
 .details {
   /* flex: 1; */
   position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   font-size: 0.8em;
   color: #bbb;
   /* background: linear-gradient(
-    to right,
-    #222 38%,
-    transparent 65%
+    to bottom,
+    transparent 40%,
+    #222 66%
   ); */
   color: #ddd;
-  top: 16px;
-  right: 8px;
   font-family: Ubuntu, Droid Sans, -apple-system,
     BlinkMacSystemFont, Segoe WPC, Segoe UI, sans-serif;
 }
