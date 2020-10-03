@@ -45,6 +45,10 @@
   grid-area: 2 / 2 / 3 / 3;
 }
 
+.div1 :global(.ch-frame-content) {
+  background: #1e1e1e;
+}
+
 .captions {
   color: #ddd;
   /* background-color: #222; */

@@ -130,7 +130,7 @@ as React elements
 ---
 
 <Video src="005.webm" start={0} end={36.64} />
-<Browser url="/hello" loadUrl="/04" zoom={1} />
+<Browser url="/hello" loadUrl="/04" zoom={0.8} />
 <Editor
   code="04.js"
   focus="14:20"
@@ -166,7 +166,7 @@ or to change the elements
 ---
 
 <Video src="006.webm" start={0} end={37.7} />
-<Browser url="/hello" loadUrl="/05" zoom={1} />
+<Browser url="/hello" loadUrl="/05" zoom={0.9} />
 <Editor
   code="05.js"
   focus="17:35"
@@ -249,18 +249,23 @@ as a syntax extension for markdown
 
 <Video src="008.webm" start={0} end={46.89} />
 <Browser url="/steps" loadUrl="/07" zoom={0.9}>
-  <Action on={20.5} type="click" selector="button" />
+  <Action
+    on={20.5}
+    type="click"
+    selector="button"
+    offset={40}
+  />
   <Action
     on={22.5}
     type="click"
     selector="button"
-    offset={50}
+    offset={40}
   />
   <Action
     on={24.5}
     type="click"
     selector="button"
-    offset={50}
+    offset={40}
   />
 </Browser>
 <Editor
@@ -490,7 +495,7 @@ and it is
 <Browser url="/" zoom={0.4} />
 <Editor
   code="cake.mdx"
-  focus="489:509"
+  focus="494:514"
   lang="md"
   tab="demo/cake.mdx"
   tabs={["demo/cake.mdx", "pages/index.js"]}
@@ -514,7 +519,7 @@ you are currently watching
 <Browser url="/" zoom={0.4} />
 <Editor
   code="cake.mdx"
-  focus="513:526"
+  focus="518:531"
   lang="md"
   tab="demo/cake.mdx"
   tabs={["demo/cake.mdx", "pages/index.js"]}
@@ -530,7 +535,7 @@ and here is the next step
 <Video src="017.webm" start={0} end={41.53} />
 <Browser
   url="https://codehike.org"
-  zoom={0.5}
+  zoom={0.4}
   prependOrigin={false}
 />
 <Editor
