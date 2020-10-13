@@ -76,9 +76,14 @@ export function CakeLayout({
         div#__next {
           height: 100%;
           margin: 0;
+          overflow: hidden;
         }
         .ch-frame .ch-editor-body {
           padding: 0;
+        }
+
+        .ch-frame-content {
+          background: black;
         }
       `}</style>
       <FitToViewport

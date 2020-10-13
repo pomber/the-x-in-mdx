@@ -4,7 +4,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: white;
+  background: #000;
+  /* background-image: url(/bg.svg); */
+
+  background-size: 1018px;
+  background-position: center;
+}
+
+.page :global(.ch-frame) {
+  box-shadow: none;
+  border: 0.7px solid rgb(56, 56, 56);
 }
 
 .main {
@@ -12,13 +21,14 @@
   height: 576px;
   /* width: 960px;
   height: 540px; */
-  background: white;
+  /* background: white; */
+  /* outline: 1px solid red; */
 }
 .grid {
   display: grid;
   height: 100%;
-  grid-template-columns: repeat(7, 1fr);
-  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: 580px 1fr;
+  grid-template-rows: 253.36px 1fr;
   grid-column-gap: 16px;
   grid-row-gap: 16px;
   padding: 16px;
@@ -26,23 +36,22 @@
 }
 
 .div1 {
-  grid-area: 1 / 1 / 8 / 5;
+  grid-area: 1 / 1 / 3 / 2;
 }
 .div2 {
-  grid-area: 1 / 5 / 5 / 8;
+  grid-area: 1 / 2 / 2 / 3;
 }
 .div3 {
-  grid-area: 5 / 5 / 8 / 8;
+  grid-area: 2 / 2 / 3 / 3;
 }
 
-.div4 {
-  grid-area: 7 / 5 / 8 / 8;
+.div1 :global(.ch-frame-content) {
+  background: #1e1e1e;
 }
 
 .captions {
   color: #ddd;
-  background-color: #222;
-  border-radius: 6px;
+  /* background-color: #222; */
   height: 100%;
   display: flex;
   align-items: center;
@@ -50,8 +59,9 @@
   text-align: center;
   font-family: Ubuntu, Droid Sans, -apple-system,
     BlinkMacSystemFont, Segoe WPC, Segoe UI, sans-serif;
-  box-shadow: 0 6px 12px -2px rgba(50, 50, 93, 0.25),
-    0 3px 7px -3px rgba(0, 0, 0, 0.3);
   padding: 0 16px;
   margin: 0;
+  z-index: 1;
+  flex: 1;
+  white-space: pre;
 }

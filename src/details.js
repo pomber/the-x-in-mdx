@@ -7,49 +7,58 @@ export function Details({
   play,
   pause,
 }) {
+  if (isPlaying) return null
   return (
-    <div style={{ display: "flex", padding: "8px 16px" }}>
+    <div
+      style={{
+        position: "fixed",
+        top: 0,
+        left: 0,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        color: "white",
+        height: "100%",
+        width: "100%",
+        background: "#0004",
+        zIndex: 10,
+      }}
+    >
       <button
         style={{
           borderRadius: "50%",
           overflow: "hidden",
-          height: 80,
-          width: 80,
+          height: 120,
+          width: 120,
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
           background: "none",
-          color: "#222",
+          color: "white",
+          border: "2px solid",
         }}
         onClick={isPlaying ? pause : play}
       >
         {isPlaying ? (
-          <PauseIcon
-            style={{ color: "#222", display: "block" }}
-          />
+          <PauseIcon style={{ display: "block" }} />
         ) : (
           <PlayIcon
             style={{
-              color: "#222",
               display: "block",
               marginLeft: "7px",
             }}
+            size="4em"
           />
         )}
       </button>
-      <div style={{ marginLeft: "16px" }}>
+      {/* <div style={{ marginLeft: "16px" }}>
         <h1 style={{ margin: "8px 0 4px" }}>
           The X in MDX
         </h1>
         <div>
-          MDXConf • <date>August 24th, 2020</date>
+          React Summit • <date>October 15-16, 2020</date>
         </div>
-      </div>
-      <div style={{ flex: 1 }} />
-      <div>
-        {toTimeString(videoTime)} /{" "}
-        {toTimeString(totalSeconds)}
-      </div>
+      </div> */}
     </div>
   )
 }

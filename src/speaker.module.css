@@ -1,40 +1,23 @@
 .captions {
   color: #ddd;
-  background-color: #222;
-  height: 100%;
+  height: 82px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   font-family: Ubuntu, Droid Sans, -apple-system,
     BlinkMacSystemFont, Segoe WPC, Segoe UI, sans-serif;
-  box-shadow: 0 6px 12px -2px rgba(50, 50, 93, 0.25),
-    0 3px 7px -3px rgba(0, 0, 0, 0.3);
   padding: 0 16px;
   margin: 0;
+  z-index: 1;
   flex: 1;
   white-space: pre;
-}
-
-.progressContainer {
-  background: linear-gradient(90deg, #666d 1%, #999d 99%);
-}
-
-.progress {
-  height: 4px;
-  background: linear-gradient(
-    90deg,
-    #f19a38 1%,
-    #f79e06 99%
-  );
-}
-
-.author {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 1.24em;
+  line-height: 1.5em;
 }
 
 .video {
@@ -42,28 +25,27 @@
   overflow: hidden;
   background: #222;
   height: 100%;
-  box-shadow: 0 6px 12px -2px rgba(50, 50, 93, 0.25),
-    0 3px 7px -3px rgba(0, 0, 0, 0.3);
   position: relative;
   display: flex;
   flex-flow: column;
+  border: 0.7px solid rgb(56, 56, 56);
 }
 
 .details {
   /* flex: 1; */
   position: absolute;
-  display: flex;
-  align-items: center;
-  text-align: center;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
   font-size: 0.8em;
   color: #bbb;
-  background: linear-gradient(
-    to right,
-    #222 38%,
-    transparent 65%
-  );
+  /* background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    #222 66%
+  ); */
   color: #ddd;
-  padding: 32px;
   font-family: Ubuntu, Droid Sans, -apple-system,
     BlinkMacSystemFont, Segoe WPC, Segoe UI, sans-serif;
 }
