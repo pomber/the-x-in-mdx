@@ -32,7 +32,7 @@ function SpeakerPanelWithRef(
             }}
             style={{
               height: "100%",
-              width: 400,
+              width: 388,
             }}
             onStepChange={changeStep}
             onTimeChange={onTimeChange}

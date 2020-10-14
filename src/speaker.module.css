@@ -28,7 +28,7 @@
   position: relative;
   display: flex;
   flex-flow: column;
-  border: 0.7px solid rgb(56, 56, 56);
+  /* border: 0.7px solid rgb(56, 56, 56); */
 }
 
 .details {

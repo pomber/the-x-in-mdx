@@ -8,6 +8,7 @@ import { sim } from "@code-hike/sim-user"
 import { SpeakerPanel } from "./speaker"
 import { Details } from "./details"
 import { FitToViewport } from "react-fit-to-viewport"
+import { Gradient } from "./gradient"
 
 export function CakeLayout({
   videoSteps,
@@ -112,7 +113,7 @@ export function CakeLayout({
               ref={browserRef}
             />
           </div>
-          <div className={s.div3}>
+          <Gradient className={s.div3}>
             <SpeakerPanel
               ref={playerRef}
               videoSteps={videoSteps}
@@ -123,7 +124,7 @@ export function CakeLayout({
                 (100 * currentSeconds) / totalSeconds
               }
             />
-          </div>
+          </Gradient>
         </div>
         <Details
           videoTime={videoTime}
