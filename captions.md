@@ -1,14 +1,5 @@
-<Video src="000.webm" start={0} end={39} />
-<Browser url="/hello" loadUrl="/01" zoom={0.8} />
-<Editor
-  code="hello.md"
-  lang="md"
-  tab="demo/hello.md"
-  tabs={["demo/hello.md", "pages/hello.js"]}
-/>
-
 ```srt
-0 –> 6.8
+1.9 –> 6.8
 Here we have a Markdown file
 6.6 –> 12
 Markdown has this clean syntax that
@@ -24,17 +15,6 @@ How it can be used for any kind of content
 and any kind of layout
 ```
 
----
-
-<Video src="001.webm" start={0} end={14} />
-<Browser url="/hello" loadUrl="/01" zoom={0.8} />
-<Editor
-  code="01.js"
-  lang="jsx"
-  tab="pages/hello.js"
-  tabs={["demo/hello.md", "pages/hello.js"]}
-/>
-
 ```srt
 0.3 –> 3.7
 But first I need to show you how this works
@@ -46,18 +26,6 @@ and we have a page that imports
 the markdown file
 ```
 
----
-
-<Video src="002.webm" start={0} end={17} />
-<Browser url="/hello" loadUrl="/01" zoom={0.8} />
-<Editor
-  code="01.js"
-  focus="2,5[9:22]"
-  lang="jsx"
-  tab="pages/hello.js"
-  tabs={["demo/hello.md", "pages/hello.js"]}
-/>
-
 ```srt
 0.2 -> 3.9
 The real magic happens on this import
@@ -67,17 +35,6 @@ into a React component
 11.5 -> 17
 And the page just renders that component
 ```
-
----
-
-<Video src="003.webm" start={0} end={20.03} />
-<Browser url="/hello" loadUrl="/02" zoom={0.8} />
-<Editor
-  code="02.js"
-  lang="jsx"
-  tab="pages/hello.js"
-  tabs={["demo/hello.md", "pages/hello.js"]}
-/>
 
 ```srt
 0.2 -> 6.5
@@ -90,18 +47,6 @@ any of the default components
 For example, here we are adding
 a purple border to all H1s
 ```
-
----
-
-<Video src="004.webm" start={0} end={26.35} />
-<Browser url="/hello" loadUrl="/03" zoom={0.8} />
-<Editor
-  code="03.js"
-  focus="13:23"
-  lang="jsx"
-  tab="pages/hello.js"
-  tabs={["demo/hello.md", "pages/hello.js"]}
-/>
 
 ```srt
 1.5 -> 5.1
@@ -120,18 +65,6 @@ is that in the children prop
 we get all the content from
 the markdown file as React elements
 ```
-
----
-
-<Video src="005.webm" start={0} end={36.64} />
-<Browser url="/hello" loadUrl="/04" zoom={0.8} />
-<Editor
-  code="04.js"
-  focus="14:20"
-  lang="jsx"
-  tab="pages/hello.js"
-  tabs={["demo/hello.md", "pages/hello.js"]}
-/>
 
 ```srt
 0.3 -> 3.9
@@ -156,18 +89,6 @@ Each element comes with an mdxType
 We can, and we will, use that mdxType to
 extract information about the content
 ```
-
----
-
-<Video src="006.webm" start={0} end={37.7} />
-<Browser url="/hello" loadUrl="/05" zoom={0.9} />
-<Editor
-  code="05.js"
-  focus="17:35"
-  lang="jsx"
-  tab="pages/hello.js"
-  tabs={["demo/hello.md", "pages/hello.js"]}
-/>
 
 ```srt
 0 -> 1.5
@@ -199,18 +120,6 @@ but if it is, you can move it to a plugin,
 and run the transformation on build-time
 ```
 
----
-
-<Video src="007.webm" start={0} end={47.68} />
-<Browser url="/steps" loadUrl="/06" zoom={0.9} />
-<Editor
-  code="steps.mdx"
-  focus="1:20"
-  lang="md"
-  tab="demo/steps.mdx"
-  tabs={["demo/steps.mdx", "pages/steps.js"]}
-/>
-
 ```srt
 1 -> 4.3
 I usually write content that has steps
@@ -238,37 +147,6 @@ But here we are taking a different approach
 and using it more
 as a syntax extension for markdown
 ```
-
----
-
-<Video src="008.webm" start={0} end={46.89} />
-<Browser url="/steps" loadUrl="/07" zoom={0.9}>
-  <Action
-    on={20.5}
-    type="click"
-    selector="button"
-    offset={40}
-  />
-  <Action
-    on={22.5}
-    type="click"
-    selector="button"
-    offset={40}
-  />
-  <Action
-    on={24.5}
-    type="click"
-    selector="button"
-    offset={40}
-  />
-</Browser>
-<Editor
-  code="07.js"
-  focus="17:28"
-  lang="jsx"
-  tab="pages/steps.js"
-  tabs={["demo/steps.mdx", "pages/steps.js"]}
-/>
 
 ```srt
 0 -> 5.9
@@ -298,23 +176,6 @@ while the rest is scrolled away
 Let's do that
 ```
 
----
-
-<Video src="009.webm" start={0} end={43.36} />
-<Browser url="/steps" loadUrl="/08" zoom={0.6}>
-  <Action on={24.5} type="scroll" selector="#step-1" />
-  <Action on={30.5} type="scroll" selector="#step-2" />
-  <Action on={32.5} type="scroll" selector="#step-3" />
-  <Action on={34.5} type="scroll" selector="#step-0" />
-</Browser>
-<Editor
-  code="08.js"
-  focus="18:32"
-  lang="jsx"
-  tab="pages/steps.js"
-  tabs={["demo/steps.mdx", "pages/steps.js"]}
-/>
-
 ```srt
 0 -> 7
 Since this is a lightning talk
@@ -340,19 +201,6 @@ But let's change it so it shows something
 from the MDX file
 ```
 
----
-
-<Video src="010.webm" start={0} end={18.47} />
-<Browser url="/steps" loadUrl="/09" zoom={0.6} />
-<Editor
-  code="steps.2.mdx"
-  focus="3:9,17:23,30"
-  focus="19:23,30:37,44"
-  lang="md"
-  tab="demo/steps.mdx"
-  tabs={["demo/steps.mdx", "pages/steps.js"]}
-/>
-
 ```srt
 2.8 -> 7.5
 Suppose we want to show some code
@@ -364,22 +212,6 @@ for this, we'll make up our own
 For example, we put the sticky part
 as the first element in the Step
 ```
-
----
-
-<Video src="011.webm" start={0} end={18.07} />
-<Browser url="/steps" loadUrl="/10" zoom={0.6}>
-  <Action on={12} type="scroll" selector="#step-1" />
-  <Action on={14.5} type="scroll" selector="#step-2" />
-  <Action on={17} type="scroll" selector="#step-3" />
-</Browser>
-<Editor
-  code="10.js"
-  focus="18:32"
-  lang="jsx"
-  tab="pages/steps.js"
-  tabs={["demo/steps.mdx", "pages/steps.js"]}
-/>
 
 ```srt
 0.8 -> 3.8
@@ -396,23 +228,6 @@ So now the code on the right
 should change as the user scrolls
 to a different step
 ```
-
----
-
-<Video src="012.webm" start={0} end={42.43} />
-<Browser url="/steps" loadUrl="/11" zoom={0.6}>
-  <Action on={10.8} type="scroll" selector="#step-1" />
-  <Action on={12.9} type="scroll" selector="#step-2" />
-  <Action on={15} type="scroll" selector="#step-3" />
-  <Action on={18} type="scroll" selector="#step-0" />
-</Browser>
-<Editor
-  code="11.js"
-  focus="19,26:38"
-  lang="jsx"
-  tab="pages/steps.js"
-  tabs={["demo/steps.mdx", "pages/steps.js"]}
-/>
 
 ```srt
 1 -> 7.5
@@ -433,18 +248,6 @@ like a video or audio, maybe a podcast
 and change the steps as the media progress
 ```
 
----
-
-<Video src="013.webm" start={0} end={8.72} />
-<Browser url="/steps" loadUrl="/11" zoom={0.6} />
-<Editor
-  code="steps.3.mdx"
-  focus="3,17,19,30"
-  lang="md"
-  tab="demo/steps.mdx"
-  tabs={["demo/steps.mdx", "pages/steps.js"]}
-/>
-
 ```srt
 0.6 -> 3
 To do that,
@@ -453,18 +256,6 @@ we'll change the MDX
 we need to specify the media file
 and the time range for each step
 ```
-
----
-
-<Video src="014.webm" start={0} end={36.17} />
-<Browser url="/steps" loadUrl="/13" zoom={0.6} />
-<Editor
-  code="13.js"
-  focus="18,28:40"
-  lang="jsx"
-  tab="pages/steps.js"
-  tabs={["demo/steps.mdx", "pages/steps.js"]}
-/>
 
 ```srt
 0.6 -> 8
@@ -487,18 +278,6 @@ the talk I'm giving right now
 and it is
 ```
 
----
-
-<Video src="015.webm" start={0} end={14.04} />
-<Browser url="/" zoom={0.4} />
-<Editor
-  code="cake.mdx"
-  focus="494:514"
-  lang="md"
-  tab="demo/cake.mdx"
-  tabs={["demo/cake.mdx", "pages/index.js"]}
-/>
-
 ```srt
 0.7 -> 4.4
 This talk was built using this same technique
@@ -509,18 +288,6 @@ Always has been
 On the left you can see the mdx for
 this specific step of the talk
 ```
-
----
-
-<Video src="016.webm" start={0} end={4} />
-<Browser url="/" zoom={0.4} />
-<Editor
-  code="cake.mdx"
-  focus="518:531"
-  lang="md"
-  tab="demo/cake.mdx"
-  tabs={["demo/cake.mdx", "pages/index.js"]}
-/>
 
 ```srt
 0 -> 4
@@ -533,22 +300,6 @@ the url we are showing on the iframe
 information for the code we are highlighting
 and even the captions for the step
 ```
-
----
-
-<Video src="017.webm" start={0} end={41.53} />
-<Browser
-  url="https://codehike.org"
-  zoom={0.4}
-  prependOrigin={false}
-/>
-<Editor
-  code="package.json.copy"
-  focus="2:16"
-  lang="json"
-  tab="package.json"
-  tabs={["package.json"]}
-/>
 
 ```srt
 1.5 -> 4.2
