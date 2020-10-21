@@ -5,13 +5,13 @@ Here we have a Markdown file
 Markdown has this clean syntax that
 makes you want to use it for everything
 12 –> 17.1
-And that's why we have MDX, an extension
-that lets us put more stuff on it
+And that's also why we have MDX,
+now we can put more things on Markdown
 31.4 –> 34
 In this talk,
-we are going to see how flexible is MDX
+we are going to see how flexible MDX is
 34 –> 39
-How it can be used for any kind of content
+And how to use it for any kind of content
 and any kind of layout
 ```
 
@@ -71,7 +71,7 @@ the markdown file as React elements
 and React elements
 are just javascript objects
 3.9 -> 8.2
-So here we are rendering
+Here we are rendering
 the wrapper children as JSON
 8.2 -> 11.8
 We are only showing some of the properties
@@ -103,7 +103,7 @@ This is a very simple example,
 but it shows the pattern we are going
 to use on the rest of the examples
 17.3 -> 21
-In all of them we'll see these two steps
+In all of them, we'll have two steps
 17.3 -> 21
 First, we extract some data
 from the children
@@ -111,9 +111,9 @@ from the children
 and then we pass that data
 to some layout component
 24.7 -> 27.7
-keep in mind that this runs on every render
+Keep in mind that this runs on every render
 27.7 -> 31.3
-in most cases,
+In most cases,
 it isn't a performance problem
 31.3 -> 37.7
 but if it is, you can move it to a plugin,
@@ -139,7 +139,7 @@ we are just using it for grouping elements
 If you are new to MDX,
 this may not be the best introduction
 35.2 -> 40
-MDX typically used for embedding
+MDX is typically used for embedding
 interactive components in Markdown
 40 -> 42.7
 But here we are taking a different approach
@@ -243,7 +243,7 @@ Instead of changing the steps
 using the scroll
 30.2 -> 38.1
 we can synchronize the steps with something
-like a video or audio, maybe a podcast
+like a video or audio,
 28.1 -> 43
 and change the steps as the media progress
 ```
@@ -285,7 +285,7 @@ This talk was built using this same technique
 It's all MDX
 Always has been
 7.3 -> 9.7
-On the left you can see the mdx for
+On the left, you can see the MDX for
 this specific step of the talk
 ```
 

@@ -1,4 +1,4 @@
-<Video src="000.webm" start={0} end={39} />
+<Video src="speaker.webm" start={0} end={25} />
 <Browser url="/hello" loadUrl="/01" zoom={0.8} />
 <Editor
   code="hello.md"
@@ -8,25 +8,25 @@
 />
 
 ```srt
-0 –> 6.8
+0 –> 3
 Here we have a Markdown file
-6.6 –> 12
+3 –> 9.5
 Markdown has this clean syntax that
 makes you want to use it for everything
-12 –> 17.1
-And that's why we have MDX, an extension
-that lets us put more stuff on it
-31.4 –> 34
+9.5 –> 15
+And that's also why we have MDX,
+now we can put more things on Markdown
+15 –> 20
 In this talk,
-we are going to see how flexible is MDX
-34 –> 39
-How it can be used for any kind of content
+we are going to see how flexible MDX is
+20 –> 25
+And how to use it for any kind of content
 and any kind of layout
 ```
 
 ---
 
-<Video src="001.webm" start={0} end={14} />
+<Video src="talk.webm" start={25} end={38} />
 <Browser url="/hello" loadUrl="/01" zoom={0.8} />
 <Editor
   code="01.js"
@@ -36,19 +36,19 @@ and any kind of layout
 />
 
 ```srt
-0.3 –> 3.7
+25 –> 28
 But first I need to show you how this works
-3.7 –> 7.9
+28 –> 33
 We have a small Next.js App
 that has the MDX plugin
-8 –> 14
+33 –> 38
 and we have a page that imports
 the markdown file
 ```
 
 ---
 
-<Video src="002.webm" start={0} end={17} />
+<Video src="talk.webm" start={38} end={52} />
 <Browser url="/hello" loadUrl="/01" zoom={0.8} />
 <Editor
   code="01.js"
@@ -59,18 +59,18 @@ the markdown file
 />
 
 ```srt
-0.2 -> 3.9
+38 -> 42
 The real magic happens on this import
-3.9 -> 11.5
+42 -> 49
 Here the MDX loader transforms the markdown
 into a React component
-11.5 -> 17
+49 -> 52
 And the page just renders that component
 ```
 
 ---
 
-<Video src="003.webm" start={0} end={20.03} />
+<Video src="talk.webm" start={52} end={100} />
 <Browser url="/hello" loadUrl="/02" zoom={0.8} />
 <Editor
   code="02.js"
@@ -93,7 +93,7 @@ a purple border to all H1s
 
 ---
 
-<Video src="004.webm" start={0} end={26.35} />
+<Video src="talk.webm" start={0} end={26.35} />
 <Browser url="/hello" loadUrl="/03" zoom={0.8} />
 <Editor
   code="03.js"
@@ -123,7 +123,7 @@ the markdown file as React elements
 
 ---
 
-<Video src="005.webm" start={0} end={36.64} />
+<Video src="talk.webm" start={0} end={36.64} />
 <Browser url="/hello" loadUrl="/04" zoom={0.8} />
 <Editor
   code="04.js"
@@ -159,7 +159,7 @@ extract information about the content
 
 ---
 
-<Video src="006.webm" start={0} end={37.7} />
+<Video src="talk.webm" start={0} end={37.7} />
 <Browser url="/hello" loadUrl="/05" zoom={0.9} />
 <Editor
   code="05.js"
@@ -201,7 +201,7 @@ and run the transformation on build-time
 
 ---
 
-<Video src="007.webm" start={0} end={47.68} />
+<Video src="talk.webm" start={0} end={47.68} />
 <Browser url="/steps" loadUrl="/06" zoom={0.9} />
 <Editor
   code="steps.mdx"
@@ -241,7 +241,7 @@ as a syntax extension for markdown
 
 ---
 
-<Video src="008.webm" start={0} end={46.89} />
+<Video src="talk.webm" start={0} end={46.89} />
 <Browser url="/steps" loadUrl="/07" zoom={0.9}>
   <Action
     on={20.5}
@@ -300,7 +300,7 @@ Let's do that
 
 ---
 
-<Video src="009.webm" start={0} end={43.36} />
+<Video src="talk.webm" start={0} end={43.36} />
 <Browser url="/steps" loadUrl="/08" zoom={0.6}>
   <Action on={24.5} type="scroll" selector="#step-1" />
   <Action on={30.5} type="scroll" selector="#step-2" />
@@ -342,7 +342,7 @@ from the MDX file
 
 ---
 
-<Video src="010.webm" start={0} end={18.47} />
+<Video src="talk.webm" start={0} end={18.47} />
 <Browser url="/steps" loadUrl="/09" zoom={0.6} />
 <Editor
   code="steps.2.mdx"
@@ -367,7 +367,7 @@ as the first element in the Step
 
 ---
 
-<Video src="011.webm" start={0} end={18.07} />
+<Video src="talk.webm" start={0} end={18.07} />
 <Browser url="/steps" loadUrl="/10" zoom={0.6}>
   <Action on={12} type="scroll" selector="#step-1" />
   <Action on={14.5} type="scroll" selector="#step-2" />
@@ -399,7 +399,7 @@ to a different step
 
 ---
 
-<Video src="012.webm" start={0} end={42.43} />
+<Video src="talk.webm" start={0} end={42.43} />
 <Browser url="/steps" loadUrl="/11" zoom={0.6}>
   <Action on={10.8} type="scroll" selector="#step-1" />
   <Action on={12.9} type="scroll" selector="#step-2" />
@@ -435,7 +435,7 @@ and change the steps as the media progress
 
 ---
 
-<Video src="013.webm" start={0} end={8.72} />
+<Video src="talk.webm" start={0} end={8.72} />
 <Browser url="/steps" loadUrl="/11" zoom={0.6} />
 <Editor
   code="steps.3.mdx"
@@ -456,7 +456,7 @@ and the time range for each step
 
 ---
 
-<Video src="014.webm" start={0} end={36.17} />
+<Video src="talk.webm" start={0} end={36.17} />
 <Browser url="/steps" loadUrl="/13" zoom={0.6} />
 <Editor
   code="13.js"
@@ -489,7 +489,7 @@ and it is
 
 ---
 
-<Video src="015.webm" start={0} end={14.04} />
+<Video src="talk.webm" start={0} end={14.04} />
 <Browser url="/" zoom={0.4} />
 <Editor
   code="cake.mdx"
@@ -512,7 +512,7 @@ this specific step of the talk
 
 ---
 
-<Video src="016.webm" start={0} end={4} />
+<Video src="talk.webm" start={0} end={4} />
 <Browser url="/" zoom={0.4} />
 <Editor
   code="cake.mdx"
@@ -536,7 +536,7 @@ and even the captions for the step
 
 ---
 
-<Video src="017.webm" start={0} end={41.53} />
+<Video src="talk.webm" start={0} end={41.53} />
 <Browser
   url="https://codehike.org"
   zoom={0.4}

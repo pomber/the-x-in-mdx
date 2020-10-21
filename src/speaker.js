@@ -27,7 +27,7 @@ function SpeakerPanelWithRef(
           <Video
             steps={videoSteps}
             containerStyle={{
-              top: -34,
+              top: -6,
               height: 229,
             }}
             style={{
