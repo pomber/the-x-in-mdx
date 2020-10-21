@@ -1,4 +1,4 @@
-<Video src="speaker.webm" start={0} end={25} />
+<Video src="speaker.webm" start={1} end={25} />
 <Browser url="/hello" loadUrl="/01" zoom={0.8} />
 <Editor
   code="hello.md"
@@ -8,25 +8,25 @@
 />
 
 ```srt
-0 –> 3
+0 –> 4
 Here we have a Markdown file
-3 –> 9.5
+4 –> 10
 Markdown has this clean syntax that
 makes you want to use it for everything
-9.5 –> 15
+10 –> 15.6
 And that's also why we have MDX,
 now we can put more things on Markdown
-15 –> 20
+15.6 –> 19.7
 In this talk,
 we are going to see how flexible MDX is
-20 –> 25
+19.7 –> 25
 And how to use it for any kind of content
 and any kind of layout
 ```
 
 ---
 
-<Video src="talk.webm" start={25} end={38} />
+<Video src="speaker.webm" start={25} end={39} />
 <Browser url="/hello" loadUrl="/01" zoom={0.8} />
 <Editor
   code="01.js"
@@ -36,19 +36,19 @@ and any kind of layout
 />
 
 ```srt
-25 –> 28
+25 –> 29.5
 But first I need to show you how this works
-28 –> 33
+29.5 –> 34.8
 We have a small Next.js App
 that has the MDX plugin
-33 –> 38
+34.8 –> 39
 and we have a page that imports
 the markdown file
 ```
 
 ---
 
-<Video src="talk.webm" start={38} end={52} />
+<Video src="speaker.webm" start={39} end={53} />
 <Browser url="/hello" loadUrl="/01" zoom={0.8} />
 <Editor
   code="01.js"
@@ -59,18 +59,18 @@ the markdown file
 />
 
 ```srt
-38 -> 42
+39 -> 43.7
 The real magic happens on this import
-42 -> 49
+43.7 -> 49.5
 Here the MDX loader transforms the markdown
 into a React component
-49 -> 52
+49.5 -> 53
 And the page just renders that component
 ```
 
 ---
 
-<Video src="talk.webm" start={52} end={100} />
+<Video src="speaker.webm" start={53} end={71} />
 <Browser url="/hello" loadUrl="/02" zoom={0.8} />
 <Editor
   code="02.js"
@@ -80,20 +80,20 @@ And the page just renders that component
 />
 
 ```srt
-0.2 -> 6.5
+53 -> 59
 If we want to change what's rendered,
 we can use the MDXProvider
-6.5 -> 13.7
+59 -> 64.3
 It has a prop that let us override
 any of the default components
-13.7 -> 20
+64.3 -> 71
 For example, here we are adding
 a purple border to all H1s
 ```
 
 ---
 
-<Video src="talk.webm" start={0} end={26.35} />
+<Video src="speaker.webm" start={71} end={95.5} />
 <Browser url="/hello" loadUrl="/03" zoom={0.8} />
 <Editor
   code="03.js"
@@ -104,26 +104,26 @@ a purple border to all H1s
 />
 
 ```srt
-1.5 -> 5.1
+71 -> 75.1
 A special component we can override
 is the Wrapper
-5.1 -> 16.5
+75.1 -> 79.5
 The wrapper is the component
 that wraps the content
-16.5 -> 20.5
+79.5 -> 85.6
 You can see how we're using it to add
 a border around the whole content
-16.5 -> 20.5
+85.6 -> 90
 But the cool thing about this component
 is that in the children prop
-20.5 -> 26.3
+90 -> 95.5
 we get all the content from
 the markdown file as React elements
 ```
 
 ---
 
-<Video src="talk.webm" start={0} end={36.64} />
+<Video src="speaker.webm" start={95.5} end={128.2} />
 <Browser url="/hello" loadUrl="/04" zoom={0.8} />
 <Editor
   code="04.js"
@@ -134,32 +134,32 @@ the markdown file as React elements
 />
 
 ```srt
-0.3 -> 3.9
+95.5 -> 100.5
 and React elements
 are just javascript objects
-3.9 -> 8.2
-So here we are rendering
+100.5 -> 103.9
+Here we are rendering
 the wrapper children as JSON
-8.2 -> 11.8
+103.9 -> 106.8
 We are only showing some of the properties
-8.2 -> 11.8
+106.8 -> 110.8
 I hope you can see
 what the JSON looks like
-16.4 -> 20.45
+110.8 -> 112.3
 It's an array
-20.45 -> 24.4
+112.3 -> 117.9
 the first element is an h1,
 the second a paragraph
-24.4 -> 28.5
+117.9 -> 122
 Each element comes with an mdxType
-28.5 -> 34.5
+122 -> 128.2
 We can, and we will, use that mdxType to
 extract information about the content
 ```
 
 ---
 
-<Video src="talk.webm" start={0} end={37.7} />
+<Video src="speaker.webm" start={128.2} end={169.7} />
 <Browser url="/hello" loadUrl="/05" zoom={0.9} />
 <Editor
   code="05.js"
@@ -170,38 +170,38 @@ extract information about the content
 />
 
 ```srt
-0 -> 1.5
+128.2 -> 129.3
 For example
-1.5 -> 5.5
+129.3 -> 133.3
 we could get a list of all the H1s
 from the children,
-5.5 -> 9.5
+133.3 -> 138.4
 and render it as a table of contents
 This is a very simple example,
-9.5 -> 12.7
+138.4 -> 144.2
 but it shows the pattern we are going
 to use on the rest of the examples
-17.3 -> 21
-In all of them we'll see these two steps
-17.3 -> 21
+144.2 -> 147.1
+In all of them, we'll have two steps
+147.1 -> 151
 First, we extract some data
 from the children
-21 -> 24.7
+151 -> 156.4
 and then we pass that data
 to some layout component
-24.7 -> 27.7
-keep in mind that this runs on every render
-27.7 -> 31.3
-in most cases,
+156.4 -> 160.4
+Keep in mind that this runs on every render
+160.4 -> 163
+In most cases,
 it isn't a performance problem
-31.3 -> 37.7
+163 -> 169.7
 but if it is, you can move it to a plugin,
 and run the transformation on build-time
 ```
 
 ---
 
-<Video src="talk.webm" start={0} end={47.68} />
+<Video src="speaker.webm" start={169.7} end={214} />
 <Browser url="/steps" loadUrl="/06" zoom={0.9} />
 <Editor
   code="steps.mdx"
@@ -212,51 +212,51 @@ and run the transformation on build-time
 />
 
 ```srt
-1 -> 4.3
+169.7 -> 177.4
 I usually write content that has steps
 like tutorials or any type of walkthrough
-10.7 -> 16.3
+177.4 -> 182.4
 Markdown doesn't have any specific syntax
 for grouping things in steps
-16.3 -> 23.7
+182.4 -> 188.6
 But we can use MDX to extend Markdown
 and make up our syntax
-23.7 -> 28.1
+188.6 -> 192.9
 The implementation of the Step component
 we are using here doesn't matter
-28.1 -> 31.8
+192.9 -> 196
 we are just using it for grouping elements
-31.8 -> 35.2
+196 -> 201.3
 If you are new to MDX,
 this may not be the best introduction
-35.2 -> 40
-MDX typically used for embedding
+201.3 -> 206.7
+MDX is typically used for embedding
 interactive components in Markdown
-40 -> 42.7
+206.7 -> 209.1
 But here we are taking a different approach
-42.7 -> 47.68
+209.1 -> 214
 and using it more
 as a syntax extension for markdown
 ```
 
 ---
 
-<Video src="talk.webm" start={0} end={46.89} />
+<Video src="speaker.webm" start={214} end={257.8} />
 <Browser url="/steps" loadUrl="/07" zoom={0.9}>
   <Action
-    on={20.5}
+    on={230}
     type="click"
     selector="button"
     offset={40}
   />
   <Action
-    on={22.5}
+    on={232}
     type="click"
     selector="button"
     offset={40}
   />
   <Action
-    on={24.5}
+    on={234}
     type="click"
     selector="button"
     offset={40}
@@ -271,41 +271,41 @@ as a syntax extension for markdown
 />
 
 ```srt
-0 -> 5.9
+214 -> 219.5
 Now, based on the MDX file that has steps,
 we can write another Wrapper component
-5.9 -> 12
+219.5 -> 224.2
 In this case, the children prop will be
 an array of Step elements
-12 -> 16.4
+224.2 -> 229
 So we can keep track of
 what step we are showing using React state
-16.4 -> 21
+229 -> 235
 and let the user change the current step
 by clicking a button
-25 -> 30.4
+235 -> 241.5
 Ok, now I want to show the same content
 but with a different layout
-30.4 -> 36.4
+241.5 -> 248.5
 There's a technique called scrollytelling,
 you may have seen it on some websites
-36.4 -> 42
+248.5 -> 253.5
 as the user scrolls down there's some
 part of the layout that sticks to the screen
-42 -> 45.1
+253.5 -> 256.4
 while the rest is scrolled away
-45.1 -> 47
+256.4 -> 257.8
 Let's do that
 ```
 
 ---
 
-<Video src="talk.webm" start={0} end={43.36} />
+<Video src="speaker.webm" start={257.8} end={292.5} />
 <Browser url="/steps" loadUrl="/08" zoom={0.6}>
-  <Action on={24.5} type="scroll" selector="#step-1" />
-  <Action on={30.5} type="scroll" selector="#step-2" />
-  <Action on={32.5} type="scroll" selector="#step-3" />
-  <Action on={34.5} type="scroll" selector="#step-0" />
+  <Action on={278} type="scroll" selector="#step-1" />
+  <Action on={282} type="scroll" selector="#step-2" />
+  <Action on={284} type="scroll" selector="#step-3" />
+  <Action on={286} type="scroll" selector="#step-0" />
 </Browser>
 <Editor
   code="08.js"
@@ -316,33 +316,33 @@ Let's do that
 />
 
 ```srt
-0 -> 7
+257.8 -> 262.5
 Since this is a lightning talk
 I won't show the code of the Layout component
-7 -> 12.5
+262.5 -> 267.5
 I'll share the link to the repo later
 if you want to see how it works
-12.5 -> 17.2
+267.5 -> 272
 The ScrollytellingLayout component
 takes two props
-17.2 -> 23.8
+272 -> 278.7
 one for the left-side that can be scrolled,
 and another for the sticky part on the right
-23.8 -> 27.2
+278.7 -> 281
 When the user scrolls to a new step
-27.2 -> 30.4
+281 -> 284.6
 we show the corresponding element
 from the sticker list
-36.2 -> 44
+284.6 -> 286.7
 which, for now, it's just the step number
-36.2 -> 44
+286.7 -> 292.5
 But let's change it so it shows something
 from the MDX file
 ```
 
 ---
 
-<Video src="talk.webm" start={0} end={18.47} />
+<Video src="speaker.webm" start={292.5} end={309} />
 <Browser url="/steps" loadUrl="/09" zoom={0.6} />
 <Editor
   code="steps.2.mdx"
@@ -354,24 +354,48 @@ from the MDX file
 />
 
 ```srt
-2.8 -> 7.5
+292.5 -> 297
 Suppose we want to show some code
 in the sticky part of the layout
-7.5 -> 14
+297 -> 302.5
 Since there isn't any specific syntax
 for this, we'll make up our own
-14 -> 19
+302.5 -> 309
 For example, we put the sticky part
 as the first element in the Step
 ```
 
 ---
 
-<Video src="talk.webm" start={0} end={18.07} />
+<Video src="speaker.webm" start={309} end={320} />
+<Browser url="/steps" loadUrl="/10" zoom={0.6}></Browser>
+<Editor
+  code="10.js"
+  focus="18:32"
+  lang="jsx"
+  tab="pages/steps.js"
+  tabs={["demo/steps.mdx", "pages/steps.js"]}
+/>
+
+```srt
+309 -> 311.5
+Now, doing some array transformations
+311.5 -> 315.7
+We extract the list of steps
+and the list of stickers
+315.7 -> 320
+and then pass them
+to the same Layout component
+```
+
+---
+
+<Video src="speaker.webm" start={323} end={335} />
 <Browser url="/steps" loadUrl="/10" zoom={0.6}>
-  <Action on={12} type="scroll" selector="#step-1" />
-  <Action on={14.5} type="scroll" selector="#step-2" />
-  <Action on={17} type="scroll" selector="#step-3" />
+  <Action on={326} type="scroll" selector="#step-1" />
+  <Action on={328.5} type="scroll" selector="#step-2" />
+  <Action on={331} type="scroll" selector="#step-3" />
+  <Action on={333.5} type="scroll" selector="#step-0" />
 </Browser>
 <Editor
   code="10.js"
@@ -382,29 +406,21 @@ as the first element in the Step
 />
 
 ```srt
-0.8 -> 3.8
-Now, doing some array transformations
-3.8 -> 10.2
-We extract the list of steps
-and the list of stickers
-10.2 -> 12.5
-and then pass them
-to the same Layout component
-13.5 -> 15
+323 -> 325
 So now the code on the right
-13.5 -> 15
+325 -> 335
 should change as the user scrolls
 to a different step
 ```
 
 ---
 
-<Video src="talk.webm" start={0} end={42.43} />
+<Video src="speaker.webm" start={335} end={367} />
 <Browser url="/steps" loadUrl="/11" zoom={0.6}>
-  <Action on={10.8} type="scroll" selector="#step-1" />
-  <Action on={12.9} type="scroll" selector="#step-2" />
-  <Action on={15} type="scroll" selector="#step-3" />
-  <Action on={18} type="scroll" selector="#step-0" />
+  <Action on={345} type="scroll" selector="#step-1" />
+  <Action on={347} type="scroll" selector="#step-2" />
+  <Action on={349} type="scroll" selector="#step-3" />
+  <Action on={351} type="scroll" selector="#step-0" />
 </Browser>
 <Editor
   code="11.js"
@@ -415,27 +431,27 @@ to a different step
 />
 
 ```srt
-1 -> 7.5
+335 -> 342
 Just for fun, I have a Terminal component
 that animates code transitions
-7.5 -> 10
+342 -> 347
 so we can use it for the stickers
 and let it handle the step changes
-21.7 -> 25.4
+350.8 -> 355
 For the next example, let's add some media
-25.4 -> 30.2
+355 -> 358.4
 Instead of changing the steps
 using the scroll
-30.2 -> 38.1
+358.4 -> 363.2
 we can synchronize the steps with something
-like a video or audio, maybe a podcast
-28.1 -> 43
+like a video or an audio,
+363.2 -> 367
 and change the steps as the media progress
 ```
 
 ---
 
-<Video src="talk.webm" start={0} end={8.72} />
+<Video src="speaker.webm" start={367} end={377} />
 <Browser url="/steps" loadUrl="/11" zoom={0.6} />
 <Editor
   code="steps.3.mdx"
@@ -446,17 +462,17 @@ and change the steps as the media progress
 />
 
 ```srt
-0.6 -> 3
+367 -> 370.5
 To do that,
 we'll change the MDX
-3 -> 9
+370.5 -> 377
 we need to specify the media file
 and the time range for each step
 ```
 
 ---
 
-<Video src="talk.webm" start={0} end={36.17} />
+<Video src="speaker.webm" start={377} end={406.9} />
 <Browser url="/steps" loadUrl="/13" zoom={0.6} />
 <Editor
   code="13.js"
@@ -467,76 +483,76 @@ and the time range for each step
 />
 
 ```srt
-0.6 -> 8
+377 -> 381.7
 Once we have that, we can extract it
 from the children on the Wrapper
-8 -> 10.2
+381.7 -> 384.5
 and pass it to another React component
-10.2 -> 18
+384.5 -> 390.3
 this time is the TalkLayout component,
 that will solve all the synching for us
-18 -> 23
+390.3 -> 398.4
 Now you should see the steps changing
 every time I snap my fingers
-26.3 -> 32.1
+398.4 -> 403
 Some of you may have noticed that this
 looks similar to the layout of this talk
-32.1 -> 34.1
+403 -> 404.7
 the talk I'm giving right now
-34.1 -> 37
+404.7 -> 406.9
 and it is
 ```
 
 ---
 
-<Video src="talk.webm" start={0} end={14.04} />
+<Video src="speaker.webm" start={406.9} end={420} />
 <Browser url="/" zoom={0.4} />
 <Editor
   code="cake.mdx"
-  focus="494:514"
+  focus="508:527"
   lang="md"
   tab="demo/cake.mdx"
   tabs={["demo/cake.mdx", "pages/index.js"]}
 />
 
 ```srt
-0.7 -> 4.4
+406.9 -> 409.5
 This talk was built using this same technique
-4.4 -> 7.3
+409.5 -> 413.7
 It's all MDX
 Always has been
-7.3 -> 9.7
+413.7 -> 420
 On the left you can see the mdx for
 this specific step of the talk
 ```
 
 ---
 
-<Video src="talk.webm" start={0} end={4} />
+<Video src="speaker.webm" start={420} end={439.6} />
 <Browser url="/" zoom={0.4} />
 <Editor
   code="cake.mdx"
-  focus="518:531"
+  focus="531:551"
   lang="md"
   tab="demo/cake.mdx"
   tabs={["demo/cake.mdx", "pages/index.js"]}
 />
 
 ```srt
-0 -> 4
+420 -> 426
 And here is the next one
 We have four different elements for each step
-0 -> 4
+426 -> 432.5
 We have the video filename and timestamps
 the url we are showing on the iframe
-0 -> 4
+432.5 -> 439.6
 information for the code we are highlighting
 and even the captions for the step
 ```
 
 ---
 
-<Video src="talk.webm" start={0} end={41.53} />
+<Video src="speaker.webm" start={439.6} end={484.1} />
 <Browser
   url="https://codehike.org"
   zoom={0.4}
@@ -551,35 +567,35 @@ and even the captions for the step
 />
 
 ```srt
-1.5 -> 4.2
+439.6 -> 444.8
 And, that's all, that's my talk
 So, what's the takeaway?
-4.2 -> 12.8
+444.8 -> 448.5
 Well, don't be afraid to use MDX
 for something different
-4.2 -> 12.8
+448.5 -> 456
 You can use it to make your own dialect
 for almost any kind of content or layout
-12.8 -> 16.2
+456 -> 459.7
 I leave you here the links
 to the repo of the talk
-16.2 -> 18
+459.7 -> 462.1
 not the slides
 but the talk itself
-18 -> 22.7
+462.1 -> 467
 you run yarn dev
 and you can watch this talk again
-22.7 -> 26.7
+467 -> 471.5
 Also, there's my twitter,
 and the components we used
-26.7 -> 29.5
+471.5 -> 474.4
 Most of them come
 from a new project I'm working on
-29.5 -> 34.5
+474.4 -> 479.2
 Code Hike, it's a set of tools
 to make code walkthroughs
-34.5 -> 40
+479.2 -> 483
 or explaining code in general
-40 -> 42
+483 -> 484.1
 Thank you! :)
 ```

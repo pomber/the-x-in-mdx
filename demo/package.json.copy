@@ -1,11 +1,11 @@
 {
   "name": "The X in MDX",
-  "version": "2020.10.15",
+  "version": "2020.10.27",
   "author": {
     "name": "Rodrigo Pombo",
     "url": "https://twitter.com/pomber"
   },
-  "homepage": "https://reactsummit2020.pomb.us",
+  "homepage": "https://nextjsconf2020.pomb.us",
   "repository": "https://github.com/pomber/the-x-in-mdx",
   "dependencies": {
     "@code-hike/mini-browser": "0.2.1",
