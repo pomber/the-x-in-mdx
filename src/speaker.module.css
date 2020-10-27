@@ -1,6 +1,6 @@
 .captions {
   color: #ddd;
-  height: 82px;
+  height: 78px;
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -16,8 +16,9 @@
   z-index: 1;
   flex: 1;
   white-space: pre;
-  font-size: 1.24em;
-  line-height: 1.5em;
+  font-size: 1.34em;
+  line-height: 1.3em;
+  background: #222;
 }
 
 .video {
@@ -28,7 +29,7 @@
   position: relative;
   display: flex;
   flex-flow: column;
-  border: 0.7px solid rgb(56, 56, 56);
+  /* border: 0.7px solid rgb(56, 56, 56); */
 }
 
 .details {

@@ -27,12 +27,12 @@ function SpeakerPanelWithRef(
           <Video
             steps={videoSteps}
             containerStyle={{
-              top: -34,
+              top: -6,
               height: 229,
             }}
             style={{
               height: "100%",
-              width: 400,
+              width: 388,
             }}
             onStepChange={changeStep}
             onTimeChange={onTimeChange}
